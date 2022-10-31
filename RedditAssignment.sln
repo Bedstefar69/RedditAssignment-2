@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileData", "FileData\FileData.csproj", "{32A66D8E-C4D2-4624-933C-06A84BBDA27F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{0C858D25-800F-407D-B69D-92F707B011B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{32A66D8E-C4D2-4624-933C-06A84BBDA27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A66D8E-C4D2-4624-933C-06A84BBDA27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A66D8E-C4D2-4624-933C-06A84BBDA27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C858D25-800F-407D-B69D-92F707B011B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C858D25-800F-407D-B69D-92F707B011B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C858D25-800F-407D-B69D-92F707B011B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C858D25-800F-407D-B69D-92F707B011B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

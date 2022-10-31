@@ -9,6 +9,11 @@
       "Username": "jan",
       "Password": 4321,
       "Id": 2
+    },
+    {
+      "Username": "string",
+      "Password": null,
+      "Id": 3
     }
   ],
   "Posts": []

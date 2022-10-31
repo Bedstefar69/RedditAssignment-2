@@ -1,13 +1,15 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Shared.DTOs;
 using Shared.Models;
 using WebAPI.Services;
+using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace WebAPI.Controllers;
+
 
 [ApiController]
 [Route("[controller]")]
@@ -73,5 +75,5 @@ public class AuthController : ControllerBase
             return BadRequest(e.Message);
         }
     }
-  
+    
 }

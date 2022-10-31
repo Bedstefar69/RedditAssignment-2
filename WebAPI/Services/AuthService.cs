@@ -1,33 +1,33 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json;
-using Newtonsoft.Json;
 using Shared.Models;
 
 namespace WebAPI.Services;
 
 public class AuthService : IAuthService
+
 {
 
-    public IList<User> getFile()
+    private readonly IList<User> users = new List<User>
     {
+        new User
+        {
+            Username = "flemse",
+            Password = "1234"
 
-        string fileName = "data.json";
-        string jsonString = File.ReadAllText(fileName);
-        User? user = JsonConvert.DeserializeObject<User>(jsonString); 
 
-        IList<User> users = new List<User>();
-        
-         users.Add(user);
-         Console.WriteLine(users.ToString());
-         return users;
-    }
-
+        },
+        new User
+        {
+            Username = "torben",
+            Password = "4321"
+        }
+    };
 
     public Task<User> ValidateUser(string username, string password)
     {
-        User? existingUser = getFile().FirstOrDefault(u => 
+        User? existingUser = users.FirstOrDefault(u =>
             u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
-        
+
         if (existingUser == null)
         {
             throw new Exception("User not found");
@@ -43,6 +43,7 @@ public class AuthService : IAuthService
 
     public Task RegisterUser(User user)
     {
+
         if (string.IsNullOrEmpty(user.Username))
         {
             throw new ValidationException("Username cannot be null");
@@ -53,11 +54,13 @@ public class AuthService : IAuthService
             throw new ValidationException("Password cannot be null");
         }
         // Do more user info validation here
-        
+
         // save to persistence instead of list
-        
-        getFile().Add(user);
-        
+
+        users.Add(user);
+
         return Task.CompletedTask;
     }
-    }
+
+    
+}
