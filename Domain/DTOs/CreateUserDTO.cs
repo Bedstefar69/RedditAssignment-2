@@ -2,12 +2,12 @@
 
 public class CreateUserDTO
 {
-    public string UserName { get;}
+    public string Username { get;}
     public string Password { get;}
 
-    public CreateUserDTO(string userName, string password)
+    public CreateUserDTO(string username, string password)
     {
-        UserName = userName;
+        Username = username;
         Password = password;
     }
 }

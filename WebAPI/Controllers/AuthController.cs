@@ -1,6 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Shared.DTOs;
@@ -10,12 +11,10 @@ using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegiste
 
 namespace WebAPI.Controllers;
 
-
 [ApiController]
 [Route("[controller]")]
 public class AuthController : ControllerBase
 {
-    
     private readonly IConfiguration config;
     private readonly IAuthService authService;
 
@@ -33,7 +32,7 @@ public class AuthController : ControllerBase
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
             new Claim(ClaimTypes.Name, user.Username),
-          
+         
         };
         return claims.ToList();
     }
@@ -59,9 +58,9 @@ public class AuthController : ControllerBase
         string serializedToken = new JwtSecurityTokenHandler().WriteToken(token);
         return serializedToken;
     }
-    
+
     [HttpPost, Route("login")]
-    public async Task<ActionResult> Login([FromBody] UserLoginDTO userLoginDto)
+    public async Task<ActionResult> Login([FromBody] CreateUserDTO userLoginDto)
     {
         try
         {
@@ -75,5 +74,7 @@ public class AuthController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
+  
     
 }
