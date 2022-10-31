@@ -7,7 +7,7 @@ public class AuthService : IAuthService
 
 {
 
-    private readonly IList<User> users = new List<User>
+    private readonly IList<User> userList = new List<User>
     {
         new User
         {
@@ -25,7 +25,7 @@ public class AuthService : IAuthService
 
     public Task<User> ValidateUser(string username, string password)
     {
-        User? existingUser = users.FirstOrDefault(u =>
+        User? existingUser = userList.FirstOrDefault(u =>
             u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
 
         if (existingUser == null)
@@ -57,7 +57,7 @@ public class AuthService : IAuthService
 
         // save to persistence instead of list
 
-        users.Add(user);
+        userList.Add(user);
 
         return Task.CompletedTask;
     }

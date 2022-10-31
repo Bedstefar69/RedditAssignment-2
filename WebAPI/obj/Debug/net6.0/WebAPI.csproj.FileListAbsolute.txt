@@ -91,7 +91,6 @@ C:\Users\andre\IdeaProjects\RedditAssignment\WebAPI\obj\Debug\net6.0\WebAPI.genr
 C:\Users\andre\IdeaProjects\RedditAssignment\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\appsettings.json
-C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\data.json
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\WebAPI.exe
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\WebAPI.deps.json
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\WebAPI.runtimeconfig.json
@@ -135,3 +134,8 @@ C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\obj\Debug\net6.0\refin
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\andre\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\data.json

@@ -1,19 +1,24 @@
 {
   "Users": [
     {
-      "Username": "flemse",
-      "Password": 1234,
+      "Username": "strdsaing",
+      "Password": "strdsing",
       "Id": 1
     },
     {
-      "Username": "jan",
-      "Password": 4321,
+      "Username": "flemse",
+      "Password": "flemming123",
       "Id": 2
     },
     {
-      "Username": "string",
-      "Password": null,
+      "Username": "torben",
+      "Password": "1234",
       "Id": 3
+    },
+    {
+      "Username": "john",
+      "Password": "hej123",
+      "Id": 4
     }
   ],
   "Posts": []
