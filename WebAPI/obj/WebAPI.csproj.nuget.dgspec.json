@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj": {
+    "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\obj\\",
+        "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj"
+              "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj"
               }
             }
           }
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj": {
+    "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj",
+        "projectName": "Auth",
+        "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -120,14 +120,73 @@
         }
       }
     },
-    "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj": {
+    "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj",
-        "projectName": "FileData",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\obj\\",
+        "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj",
+        "projectName": "FileData",
+        "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -142,8 +201,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj"
+              "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj"
               }
             }
           }
@@ -177,14 +236,14 @@
         }
       }
     },
-    "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -199,11 +258,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj"
+              "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj"
               },
-              "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj"
+              "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj"
+              },
+              "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj": {
+                "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj"
               }
             }
           }
@@ -221,10 +283,6 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.10, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

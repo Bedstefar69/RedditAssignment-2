@@ -290,11 +290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"

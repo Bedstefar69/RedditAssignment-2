@@ -182,15 +182,6 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
-      "Newtonsoft.Json/13.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
-        }
-      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -293,6 +284,19 @@
         },
         "runtime": {
           "bin/placeholder/Application.dll": {}
+        }
+      },
+      "Auth/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "6.0.10"
+        },
+        "compile": {
+          "bin/placeholder/Auth.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Auth.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -707,33 +711,6 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "Newtonsoft.Json/13.0.1": {
-      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
-      "type": "package",
-      "path": "newtonsoft.json/13.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.1.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
     "Swashbuckle.AspNetCore/6.2.3": {
       "sha512": "cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
       "type": "package",
@@ -927,6 +904,11 @@
       "path": "../Application/Application.csproj",
       "msbuildProject": "../Application/Application.csproj"
     },
+    "Auth/1.0.0": {
+      "type": "project",
+      "path": "../Auth/Auth.csproj",
+      "msbuildProject": "../Auth/Auth.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -941,9 +923,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
+      "Auth >= 1.0.0",
       "FileData >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.10",
-      "Newtonsoft.Json >= 13.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -953,11 +935,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -972,11 +954,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\Application\\Application.csproj"
+            "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Application\\Application.csproj"
             },
-            "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj": {
-              "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj"
+            "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj": {
+              "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\Auth\\Auth.csproj"
+            },
+            "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj": {
+              "projectPath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj"
             }
           }
         }
@@ -994,10 +979,6 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.10, )"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

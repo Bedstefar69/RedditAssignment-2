@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OGyTMw+9/IpyVfogzMBIAtQg1arFDuDrQw+UYQNA7Rdod1ed9EdiStIylOpDcnKwwU+LO6K3xRMxtzLxmyRnkw==",
+  "dgSpecHash": "2+TuZ18D0JLOztDjnSumDf9vzrLr99/xUiqpu22K74AXM23kNaJmlD6yBD8JKLnDxRT/5uhZIlQ5wExcgYbO0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\Documents\\GitHub\\Reddit-Assignment\\FileData\\FileData.csproj",
+  "projectFilePath": "C:\\Users\\andre\\IdeaProjects\\RedditAssignment\\FileData\\FileData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.10\\microsoft.aspnetcore.authorization.6.0.10.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.10\\microsoft.aspnetcore.metadata.6.0.10.nupkg.sha512",

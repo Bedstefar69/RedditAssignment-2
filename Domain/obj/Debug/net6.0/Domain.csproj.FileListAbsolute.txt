@@ -10,3 +10,15 @@ C:\Users\andre\Documents\GitHub\Reddit-Assignment\Domain\obj\Debug\net6.0\Domain
 C:\Users\andre\Documents\GitHub\Reddit-Assignment\Domain\obj\Debug\net6.0\refint\Domain.dll
 C:\Users\andre\Documents\GitHub\Reddit-Assignment\Domain\obj\Debug\net6.0\Domain.pdb
 C:\Users\andre\Documents\GitHub\Reddit-Assignment\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\andre\IdeaProjects\RedditAssignment\Domain\obj\Debug\net6.0\ref\Domain.dll
