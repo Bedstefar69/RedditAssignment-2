@@ -16,21 +16,7 @@ public class AuthService : IAuthService
         return dc.Users.ToList();
     }
 
-
-    private readonly IList<User> users = new List<User>
-    {
-        new User
-        {
-            Username = "flemse",
-            Password = "flemming123"
-        },
-        new User
-        {
-            Username = "torben",
-            Password = "4321"
-        }
-    };
-
+    
     public Task<User> ValidateUser(string username, string password)
     {
         User? existingUser = ReadFile().FirstOrDefault(u =>
