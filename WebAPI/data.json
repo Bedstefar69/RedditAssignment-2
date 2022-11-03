@@ -4,7 +4,23 @@
       "Username": "flemse",
       "Password": "flemming123",
       "Id": 1
+    },
+    {
+      "Username": "eqwe",
+      "Password": "qweqwe",
+      "Id": 2
     }
   ],
-  "Posts": []
+  "Posts": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "Ka du li ost?",
+      "Body": "blablablablablabla"
+    }
+  ]
 }

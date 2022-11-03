@@ -21,7 +21,8 @@ builder.Services.AddScoped<FileContext>();
 builder.Services.AddScoped<IUserDAO, UserFileDAO>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-
+builder.Services.AddScoped<IPostDAO, PostDAO>();
+builder.Services.AddScoped<IPostLogic, PostLogic>();
 
 AuthorizationPolicies.AddPolicies(builder.Services);
 
