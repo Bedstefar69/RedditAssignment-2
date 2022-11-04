@@ -57,6 +57,7 @@ public class AuthController : ControllerBase
     
         string serializedToken = new JwtSecurityTokenHandler().WriteToken(token);
         return serializedToken;
+        
     }
 
     [HttpPost, Route("login")]

@@ -3,9 +3,12 @@
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Mvc
+@using System.Security.Claims
 @inject IUserService userService
 @inject IPostService postService
 @inject NavigationManager navMgr
+
 
 <div class="card">
     @if (users == null)
@@ -35,7 +38,7 @@
 
 @code {
     private IEnumerable<User>? users;
-    private int? selectedUserId;
+    private int selectedUserId;
     private string postTitle = "";
     private string body = "";
 
@@ -72,10 +75,12 @@
 
         try
         {
-            
-            CreatePostDTO dto = new(userService.GetUsers(null,1, postTitle,body);
+            ControllerContext context = new ControllerContext();
+            selectedUserId = Convert.ToInt32(context.HttpContext.User.FindFirstValue("id"));
+           
+            CreatePostDTO dto = new(selectedUserId, postTitle,body);
             await postService.CreateAsync(dto);
-            navMgr.NavigateTo("/");
+            navMgr.NavigateTo("/"); 
         }
         catch (Exception e)
         {
@@ -83,4 +88,6 @@
             msg = e.Message;
         }
     }
+
+   
 }

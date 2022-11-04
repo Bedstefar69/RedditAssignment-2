@@ -7,6 +7,7 @@ using BlazorApp.Services.Http;
 using HttpClients.ClientInterfaces;
 using HttpClients.ClientInterfaces.Implementations;
 using Microsoft.AspNetCore.Components.Authorization;
+using IPostService = HttpClients.ClientInterfaces.IPostService;
 
 var builder = WebApplication.CreateBuilder(args);
 
