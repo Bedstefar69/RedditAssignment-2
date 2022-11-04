@@ -1,9 +1,40 @@
 ﻿@page "/"
-
+@using BlazorApp.Services
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<link href="css/index.css" rel="stylesheet"/>
 
-Welcome to your new app.
+<AuthorizeView>
+    <NotAuthorized>
+        <div class="main_div">
+        <h1 id="welcome_banner">Velkommen til 4tune</h1>
+        <h2 id="welcome_subbanner">Du kan logge ind øverest i højre hjørne</h2>
+        <h4>Ytringsfrihed er ikke til diskussion</h4>
+        </div>
+    </NotAuthorized>
+    
+    <Authorized>
+        <div class="banner-container">
+            
+        </div>
+        <div class="posts-container"></div>
+        
+        
+       @code
+           {
+            protected override async Task OnInitializedAsync()
+            {
+                //await getPosts();
+            }
 
-<SurveyPrompt Title="How is Blazor working for you?"/>
+            Task getPosts()
+            {
+                //postService.getAllPosts();
+                return null;
+            }
+            
+           }
+    
+    
+        </Authorized>
+</AuthorizeView>

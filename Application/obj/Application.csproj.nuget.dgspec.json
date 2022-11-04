@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj": {}
+    "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj": {
+    "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\obj\\",
+        "projectPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\poizo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\poizo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj"
+              "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj"
               }
             }
           }
@@ -47,8 +47,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -57,21 +56,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj": {
+    "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\poizo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\poizo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -106,8 +105,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -116,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
