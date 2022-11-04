@@ -303,32 +303,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\poizo\\.nuget\\packages\\": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\poizo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Application\\obj\\",
+      "projectPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\poizo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\poizo\\RiderProjects\\RedditAssignment-2\\Domain\\Domain.csproj"
+            "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Domain\\Domain.csproj"
             }
           }
         }
@@ -348,7 +355,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -357,7 +365,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
