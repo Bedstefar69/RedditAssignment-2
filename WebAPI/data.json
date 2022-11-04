@@ -21,6 +21,26 @@
       },
       "Title": "Ka du li ost?",
       "Body": "blablablablablabla"
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Username": "eqwe",
+        "Password": "qweqwe",
+        "Id": 2
+      },
+      "Title": "flemming?",
+      "Body": "jajajjajaja"
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "Skinke Rating",
+      "Body": "Dagens skinke er sej"
     }
   ]
 }

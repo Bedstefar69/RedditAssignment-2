@@ -6,4 +6,6 @@ namespace HttpClients.ClientInterfaces;
 public interface IUserService
 {
     Task<User> Create(CreateUserDTO dto);
+    
+    Task<IEnumerable<User>> GetUsers(string? usernameContains = null);
 }

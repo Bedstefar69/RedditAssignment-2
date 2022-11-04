@@ -32,7 +32,12 @@ public class UserLogic : IUserLogic
     
         return created;
     }
-    
+
+    public Task<IEnumerable<User>> GetAsync(GetUsersDTO searchParameter)
+    {
+        return userDao.GetAsync(searchParameter);
+    }
+
     private static void ValidateData(CreateUserDTO userToCreate)
     {
         string userName = userToCreate.Username;

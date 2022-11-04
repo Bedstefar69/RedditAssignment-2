@@ -1,4 +1,5 @@
 ﻿using Application.DAOInterfaces;
+using Shared.DTOs;
 using Shared.Models;
 
 namespace FileData.DAOs;
@@ -26,5 +27,19 @@ public class PostDAO : IPostDAO
         context.SaveChanges();
 
         return Task.FromResult(post);
+    }
+
+    public Task<IEnumerable<Post>> GetAsync(GetPostsDTO searchParameter)
+    {
+        IEnumerable<Post> result = context.Posts.AsEnumerable();
+
+        if (!string.IsNullOrEmpty(searchParameter.Username))
+        {
+           
+            result = context.Posts.Where(post =>
+                post.Owner.Username.Equals(searchParameter.Username, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return Task.FromResult(result);
     }
 }
