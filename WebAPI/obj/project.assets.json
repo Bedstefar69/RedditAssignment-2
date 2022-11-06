@@ -1066,45 +1066,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\andre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj"
+            "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Application\\Application.csproj"
             },
-            "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Auth\\Auth.csproj": {
-              "projectPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\Auth\\Auth.csproj"
+            "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Auth\\Auth.csproj": {
+              "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\Auth\\Auth.csproj"
             },
-            "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\FileData\\FileData.csproj": {
-              "projectPath": "C:\\Users\\Dell\\Documents\\GitHub\\RedditAssignment-2\\FileData\\FileData.csproj"
+            "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\FileData\\FileData.csproj": {
+              "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\RedditAssignment-2\\FileData\\FileData.csproj"
             }
           }
         }

@@ -38,6 +38,6 @@ public class PostLogic : IPostLogic
     private void ValidateTodo(CreatePostDTO dto)
     {
         if (string.IsNullOrEmpty(dto.Title)) throw new Exception("Title cannot be empty.");
-        // other validation stuff
+       
     }
 }

@@ -46,6 +46,36 @@
       },
       "Title": "Skinke Rating",
       "Body": "Dagens skinke er sej"
+    },
+    {
+      "Id": 4,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "fdsfsdf",
+      "Body": "sdfsdf"
+    },
+    {
+      "Id": 5,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "yeah",
+      "Body": "ost"
+    },
+    {
+      "Id": 6,
+      "Owner": {
+        "Username": "bigmanthing",
+        "Password": "yea",
+        "Id": 3
+      },
+      "Title": "john",
+      "Body": "hitler"
     }
   ]
 }

@@ -3,11 +3,11 @@
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @using Microsoft.AspNetCore.Components
-@using Microsoft.AspNetCore.Mvc
 @using System.Security.Claims
 @inject IUserService userService
 @inject IPostService postService
 @inject NavigationManager navMgr
+
 
 
 <div class="card">
@@ -18,6 +18,16 @@
     else
     {
         <h3>Create Post</h3>
+        <div class="form-group field">
+            <label>User:</label>
+            <select @bind="currenUserId">
+               
+                @foreach (User user in users)
+                {
+                    <option value="@user.Id">@user.Username</option>
+                }
+            </select>
+        </div>
         <div class="form-group field">
             <label>Title:</label>
             <input type="text" @bind="postTitle"/>
@@ -38,7 +48,7 @@
 
 @code {
     private IEnumerable<User>? users;
-    private int selectedUserId;
+    private int currenUserId;
     private string postTitle = "";
     private string body = "";
 
@@ -75,12 +85,10 @@
 
         try
         {
-            ControllerContext context = new ControllerContext();
-            selectedUserId = Convert.ToInt32(context.HttpContext.User.FindFirstValue("id"));
-           
-            CreatePostDTO dto = new(selectedUserId, postTitle,body);
+            
+            CreatePostDTO dto = new((int)currenUserId, postTitle,body);
             await postService.CreateAsync(dto);
-            navMgr.NavigateTo("/"); 
+            navMgr.NavigateTo("/");
         }
         catch (Exception e)
         {
