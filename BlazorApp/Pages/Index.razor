@@ -1,7 +1,5 @@
 ﻿@page "/"
-@using BlazorApp.Services
 @using global::Shared.Models
-@using HttpClients.ClientInterfaces
 @using IPostService = HttpClients.ClientInterfaces.IPostService
 @inject IPostService postService
 @inject NavigationManager navMgr
@@ -75,12 +73,7 @@
                 }
             }
 
-            private void Navigate()
-            {
-                navMgr.NavigateTo("/SeePost");
-            }
 
-          
 
         }
 

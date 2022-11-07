@@ -1,10 +1,7 @@
 ﻿@page "/SeePost/{id:int}"
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
-@using global::Shared.DTOs
 @inject IPostService postService
-@inject IUserService userService
-@inject NavigationManager navMgr
 <h3>SeePost</h3>
    @if (posts == null)
         {

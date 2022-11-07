@@ -3,7 +3,6 @@
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @using Microsoft.AspNetCore.Components
-@using System.Security.Claims
 @inject IUserService userService
 @inject IPostService postService
 @inject NavigationManager navMgr
@@ -52,7 +51,6 @@
     private string? currentUser;
     private string postTitle = "";
     private string body = "";
-
     private string msg = "";
 
     protected override async Task OnInitializedAsync()
