@@ -21,15 +21,15 @@
                         <input type="text" @bind="usernameFilter"/>
                     </div>
                     <div class="filter">
-                        <label>User id:</label>
-                        <input type="number" @bind="userIdFilter"/>
+                        <label>Post id:</label>
+                        <input type="number" @bind="postIdFilter"/>
                     </div>
                 }
             </div>
         </div>
         
         <div>
-            <button style="background-color: #ffa500" @onclick="LoadPosts">Load</button>
+            <button style="background-color: #ffa500" @onclick="OnInitializedAsync">Load</button>
         </div>
 
         @if (posts == null)
@@ -44,8 +44,8 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>post ID</th>
-                    <th>Owner ID</th>
+                    <th>Post ID</th>
+                    <th>Owner</th>
                     <th>Title</th>
                     <th>Body</th>
                 </tr>
@@ -72,20 +72,23 @@
 </AuthorizeView>
 
 @code {
+
     private IEnumerable<Post>? posts;
     private string msg = "";
     private bool doShowFilters = false;
 
+   
     private string? usernameFilter;
-    private int? userIdFilter;
+    private int? postIdFilter;
    
     
-    private async Task LoadPosts()
+    protected override async Task OnInitializedAsync()
     {
         try
         {
             
-            posts = await postService.GetAsync(usernameFilter, userIdFilter);
+            
+            posts = await postService.GetAsync(usernameFilter, postIdFilter);
         }
         catch (Exception e)
         {

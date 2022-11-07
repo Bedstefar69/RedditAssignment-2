@@ -1,0 +1,8 @@
+@startuml
+class CreatePostDTO {
+    + Username : string <<get>> <<set>>
+    + Title : string <<get>> <<set>>
+    + Body : string <<get>> <<set>>
+    + CreatePostDTO(username:string, title:string, body:string)
+}
+@enduml

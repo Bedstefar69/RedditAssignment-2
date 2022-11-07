@@ -1,0 +1,8 @@
+@startuml
+class UserController {
+    + UserController(userLogic:IUserLogic)
+    + <<async>> CreateAsync(dto:CreateUserDTO) : Task<ActionResult<User>>
+    + <<async>> GetAsync(username:string?) : Task<ActionResult<IEnumerable<User>>>
+}
+ControllerBase <|-- UserController
+@enduml

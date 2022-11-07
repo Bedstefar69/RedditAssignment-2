@@ -1,0 +1,8 @@
+@startuml
+class CreateUserDTO {
+    + Username : string <<get>> <<set>>
+    + Password : string <<get>> <<set>>
+    + CreateUserDTO()
+    + CreateUserDTO(username:string, password:string)
+}
+@enduml

@@ -19,4 +19,10 @@
       <None Include="wwwroot\css\index.css" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Update="Pages\SeePost.razor">
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>

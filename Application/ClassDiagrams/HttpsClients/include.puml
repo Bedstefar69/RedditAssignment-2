@@ -1,0 +1,9 @@
+@startuml
+!include .\\.\HttpClients\ClientInterfaces\IPostService.puml
+!include .\\.\HttpClients\ClientInterfaces\IUserService.puml
+!include .\\.\HttpClients\ClientInterfaces\Implementations\PostHttpClient.puml
+!include .\\.\HttpClients\ClientInterfaces\Implementations\UserHttpClient.puml
+!include .\\.\HttpClients\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\HttpClients\obj\Debug\net6.0\HttpClients.AssemblyInfo.puml
+!include .\\.\HttpClients\obj\Debug\net6.0\HttpClients.GlobalUsings.g.puml
+@enduml

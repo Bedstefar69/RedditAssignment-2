@@ -4,24 +4,19 @@
 @using HttpClients.ClientInterfaces
 @using IPostService = HttpClients.ClientInterfaces.IPostService
 @inject IPostService postService
+@inject NavigationManager navMgr
 <PageTitle>Index</PageTitle>
 
 <link href="css/index.css" rel="stylesheet"/>
 
-<AuthorizeView>
-    <NotAuthorized>
 
     <div class="main_div">
         <h1 id="welcome_banner">Velkommen til 4tune</h1>
         <h2 id="welcome_subbanner">Du kan logge ind øverest i højre hjørne</h2>
         <h4>Ytringsfrihed er ikke til diskussion</h4>
     </div>
-</NotAuthorized>
 
-    <Authorized>
-        <div>
-            <button style="background-color: #ffa500" @onclick="LoadPosts">Load</button>
-        </div>
+      
 
         @if (posts == null)
         {
@@ -35,8 +30,9 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>post ID</th>
-                    <th>Owner ID</th>
+                    <th></th>
+                    <th>Post ID</th>
+                    <th>Owner</th>
                     <th>Title</th>
                     <th>Body</th>
                 </tr>
@@ -45,6 +41,7 @@
                 @foreach (var item in posts)
                 {
                     <tr>
+                        <td><button style="background-color:#ffa500;" @onclick="@(() => navMgr.NavigateTo($"/SeePost/{item.Id}"))">See Post</button></td>
                         <td>@item.Id</td>
                         <td>@item.Owner.Username</td>
                         <td>@item.Title</td>
@@ -65,7 +62,7 @@
             private IEnumerable<Post>? posts;
             private string msg = "";
 
-            private async Task LoadPosts()
+            protected override async Task OnInitializedAsync()
             {
                 try
                 {
@@ -78,8 +75,14 @@
                 }
             }
 
+            private void Navigate()
+            {
+                navMgr.NavigateTo("/SeePost");
+            }
+
+          
+
         }
 
 
-    </Authorized>
-</AuthorizeView>
+ 

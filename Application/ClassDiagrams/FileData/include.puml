@@ -1,0 +1,9 @@
+@startuml
+!include .\\.\FileData\DataContainer.puml
+!include .\\.\FileData\FileContext.puml
+!include .\\.\FileData\DAOs\PostDAO.puml
+!include .\\.\FileData\DAOs\UserFileDAO.puml
+!include .\\.\FileData\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\FileData\obj\Debug\net6.0\FileData.AssemblyInfo.puml
+!include .\\.\FileData\obj\Debug\net6.0\FileData.GlobalUsings.g.puml
+@enduml

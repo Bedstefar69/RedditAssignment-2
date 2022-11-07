@@ -1,0 +1,10 @@
+@startuml
+class UserFileDAO {
+    + UserFileDAO(context:FileContext)
+    + CreateUserAsync(user:User) : Task<User>
+    + GetByUsernameAsync(userName:string) : Task<User?>
+    + GetByIdAsync(id:int) : Task<User?>
+    + GetAsync(searchParameters:GetUsersDTO) : Task<IEnumerable<User>>
+}
+IUserDAO <|-- UserFileDAO
+@enduml

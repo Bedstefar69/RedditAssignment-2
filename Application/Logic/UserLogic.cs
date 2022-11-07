@@ -13,7 +13,7 @@ public class UserLogic : IUserLogic
     {
         this.userDao = userDao;
     }
-    
+
     public async Task<User> CreateUserAsync(CreateUserDTO dto)
     {
         User? existing = await userDao.GetByUsernameAsync(dto.Username);
@@ -25,11 +25,10 @@ public class UserLogic : IUserLogic
         {
             Username = dto.Username,
             Password = dto.Password
-            
         };
-    
+
         User created = await userDao.CreateUserAsync(toCreate);
-    
+
         return created;
     }
 

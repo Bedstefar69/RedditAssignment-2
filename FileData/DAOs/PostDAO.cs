@@ -36,8 +36,13 @@ public class PostDAO : IPostDAO
         if (!string.IsNullOrEmpty(searchParameter.Username))
         {
            
-            result = context.Posts.Where(post =>
-                post.Owner.Username.Equals(searchParameter.Username, StringComparison.OrdinalIgnoreCase));
+            result = context.Posts.Where(post => post.Owner.Username.Equals(searchParameter.Username, StringComparison.OrdinalIgnoreCase));
+        }
+        
+        if (searchParameter.PostId != null)
+        {
+           
+            result = context.Posts.Where(post => post.Id == searchParameter.PostId);
         }
 
         return Task.FromResult(result);

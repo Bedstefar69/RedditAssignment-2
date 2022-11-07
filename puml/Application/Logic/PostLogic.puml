@@ -1,0 +1,8 @@
+@startuml
+class PostLogic {
+    + PostLogic(postDao:IPostDAO, userDao:IUserDAO)
+    + <<async>> CreateAsync(dto:CreatePostDTO) : Task<Post>
+    + GetAsync(searchParameter:GetPostsDTO) : Task<IEnumerable<Post>>
+}
+IPostLogic <|-- PostLogic
+@enduml

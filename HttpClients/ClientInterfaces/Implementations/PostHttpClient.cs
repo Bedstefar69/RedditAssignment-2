@@ -23,9 +23,27 @@ public class PostHttpClient : IPostService
         }
     }
 
-    public async Task<ICollection<Post>> GetAsync(string? username, int? userId)
+    public async Task<GetPostsDTO> GetByIdAsync(int id)
     {
-        string query = ConstructQuery(username, userId);
+        HttpResponseMessage response = await client.GetAsync($"/post/{id}");
+        string content = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(content);
+        }
+
+        GetPostsDTO post = JsonSerializer.Deserialize<GetPostsDTO>(content, 
+            new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            }
+        )!;
+        return post;
+    }
+
+    public async Task<ICollection<Post>> GetAsync(string? username, int? postId)
+    {
+        string query = ConstructQuery(username, postId);
         
 
         HttpResponseMessage response = await client.GetAsync("/Post" + query);
@@ -42,18 +60,19 @@ public class PostHttpClient : IPostService
         return posts;
     }
     
-    private static string ConstructQuery(string? userName, int? userId)
+    private static string ConstructQuery(string? userName, int? postId)
     {
         string query = "";
         if (!string.IsNullOrEmpty(userName))
         {
             query += $"?username={userName}";
         }
-
-        if (userId != null)
+        
+        
+        if (postId != null)
         {
             query += string.IsNullOrEmpty(query) ? "?" : "&";
-            query += $"userid={userId}";
+            query += $"?postId={postId}";
         }
 
         return query;

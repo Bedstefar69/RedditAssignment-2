@@ -1,0 +1,11 @@
+@startuml
+!include .\\.\Application\DAOInterfaces\IPostDAO.puml
+!include .\\.\Application\DAOInterfaces\IUserDAO.puml
+!include .\\.\Application\Logic\PostLogic.puml
+!include .\\.\Application\Logic\UserLogic.puml
+!include .\\.\Application\LogicInterfaces\IPostLogic.puml
+!include .\\.\Application\LogicInterfaces\IUserLogic.puml
+!include .\\.\Application\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\Application\obj\Debug\net6.0\Application.AssemblyInfo.puml
+!include .\\.\Application\obj\Debug\net6.0\Application.GlobalUsings.g.puml
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+!include .\\.\Domain\DTOs\CreatePostDTO.puml
+!include .\\.\Domain\DTOs\CreateUserDTO.puml
+!include .\\.\Domain\DTOs\GetPostsDTO.puml
+!include .\\.\Domain\DTOs\GetUsersDTO.puml
+!include .\\.\Domain\Models\Post.puml
+!include .\\.\Domain\Models\User.puml
+!include .\\.\Domain\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.puml
+!include .\\.\Domain\obj\Debug\net6.0\Domain.GlobalUsings.g.puml
+@enduml

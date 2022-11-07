@@ -1,0 +1,14 @@
+@startuml
+!include .\\.\BlazorApp\Program.puml
+!include .\\.\BlazorApp\Auth\CustomAuthProvider.puml
+!include .\\.\BlazorApp\Data\WeatherForecast.puml
+!include .\\.\BlazorApp\Data\WeatherForecastService.puml
+!include .\\.\BlazorApp\Pages\Error.cshtml.puml
+!include .\\.\BlazorApp\Services\IAuthService.puml
+!include .\\.\BlazorApp\Services\IPostService.puml
+!include .\\.\BlazorApp\Services\Http\JwtAuthService.puml
+!include .\\.\BlazorApp\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\BlazorApp\obj\Debug\net6.0\BlazorApp.AssemblyInfo.puml
+!include .\\.\BlazorApp\obj\Debug\net6.0\BlazorApp.GlobalUsings.g.puml
+!include .\\.\BlazorApp\obj\Debug\net6.0\BlazorApp.RazorAssemblyInfo.puml
+@enduml

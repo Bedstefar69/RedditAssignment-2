@@ -1,0 +1,8 @@
+@startuml
+class UserLogic {
+    + UserLogic(userDao:IUserDAO)
+    + <<async>> CreateUserAsync(dto:CreateUserDTO) : Task<User>
+    + GetAsync(searchParameter:GetUsersDTO) : Task<IEnumerable<User>>
+}
+IUserLogic <|-- UserLogic
+@enduml
