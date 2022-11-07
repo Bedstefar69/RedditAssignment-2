@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
@@ -6,6 +7,8 @@ namespace WebAPI.Controllers;
 [ApiController]
 [Route("[controller]")]
 [Authorize]
+
+
 public class TokenController: ControllerBase
 {
     [HttpGet("authorized")]
@@ -13,7 +16,7 @@ public class TokenController: ControllerBase
     {
         return Ok("This was accepted as authorized");
     }
-    
+
     [HttpGet("anonymous"), AllowAnonymous]
     public ActionResult GetAsAnon()
     {

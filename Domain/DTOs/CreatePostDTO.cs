@@ -2,16 +2,16 @@
 
 public class CreatePostDTO
 {
-    public int OwnerID { get; set; }
+    public string Username { get; set; }
     public string Title { get; set; }
     
     public string Body { get; set; }
   
     
 
-    public CreatePostDTO(int ownerID, string title, string body)
+    public CreatePostDTO(string username, string title, string body)
     {
-        OwnerID = ownerID;
+        Username = username;
         Title = title;
         Body = body;
     }

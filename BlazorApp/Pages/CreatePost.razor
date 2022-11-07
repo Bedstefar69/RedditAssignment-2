@@ -10,6 +10,7 @@
 
 
 
+
 <div class="card">
     @if (users == null)
     {
@@ -20,11 +21,11 @@
         <h3>Create Post</h3>
         <div class="form-group field">
             <label>User:</label>
-            <select @bind="currenUserId">
+            <select @bind="currentUser">
                
                 @foreach (User user in users)
                 {
-                    <option value="@user.Id">@user.Username</option>
+                    <option value="@user.Username">@user.Username</option>
                 }
             </select>
         </div>
@@ -48,7 +49,7 @@
 
 @code {
     private IEnumerable<User>? users;
-    private int currenUserId;
+    private string? currentUser;
     private string postTitle = "";
     private string body = "";
 
@@ -85,8 +86,12 @@
 
         try
         {
+            HttpContext c = new DefaultHttpContext();
+            string? identity = c.User.Identity!.Name;
             
-            CreatePostDTO dto = new((int)currenUserId, postTitle,body);
+            
+
+            CreatePostDTO dto = new(currentUser, postTitle,body);
             await postService.CreateAsync(dto);
             navMgr.NavigateTo("/");
         }

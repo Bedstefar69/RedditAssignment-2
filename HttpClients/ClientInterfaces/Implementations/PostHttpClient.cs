@@ -26,6 +26,7 @@ public class PostHttpClient : IPostService
     public async Task<ICollection<Post>> GetAsync(string? username, int? userId)
     {
         string query = ConstructQuery(username, userId);
+        
 
         HttpResponseMessage response = await client.GetAsync("/Post" + query);
         string content = await response.Content.ReadAsStringAsync();
