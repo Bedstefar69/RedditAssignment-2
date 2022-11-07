@@ -1,6 +1,4 @@
 @startuml
-class "AddSingleton`1"<T> {
-}
 class "AddScoped`2"<T1,T2> {
 }
 @enduml

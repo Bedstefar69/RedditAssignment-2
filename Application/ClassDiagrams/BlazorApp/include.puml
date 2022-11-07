@@ -1,8 +1,6 @@
 @startuml
 !include .\\.\BlazorApp\Program.puml
 !include .\\.\BlazorApp\Auth\CustomAuthProvider.puml
-!include .\\.\BlazorApp\Data\WeatherForecast.puml
-!include .\\.\BlazorApp\Data\WeatherForecastService.puml
 !include .\\.\BlazorApp\Pages\Error.cshtml.puml
 !include .\\.\BlazorApp\Services\IAuthService.puml
 !include .\\.\BlazorApp\Services\IPostService.puml
