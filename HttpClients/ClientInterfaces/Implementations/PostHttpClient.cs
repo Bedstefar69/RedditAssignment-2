@@ -72,8 +72,9 @@ public class PostHttpClient : IPostService
         if (postId != null)
         {
             query += string.IsNullOrEmpty(query) ? "?" : "&";
-            query += $"?postId={postId}";
+            query += $"postId={postId}";
         }
+        Console.WriteLine(query);
 
         return query;
     }

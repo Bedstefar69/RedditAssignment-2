@@ -3,6 +3,7 @@
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @using Microsoft.AspNetCore.Components
+@using System.Security.Claims
 @inject IUserService userService
 @inject IPostService postService
 @inject NavigationManager navMgr
@@ -11,23 +12,7 @@
 
 
 <div class="card">
-    @if (users == null)
-    {
-        <label>Loading users...</label>
-    }
-    else
-    {
-        <h3>Create Post</h3>
-        <div class="form-group field">
-            <label>User:</label>
-            <select @bind="currentUser">
-               
-                @foreach (User user in users)
-                {
-                    <option value="@user.Username">@user.Username</option>
-                }
-            </select>
-        </div>
+    <h3>Create Post</h3>
         <div class="form-group field">
             <label>Title:</label>
             <input type="text" @bind="postTitle"/>
@@ -43,22 +28,31 @@
             }
             <button @onclick="Create" class="acceptbtn">Create</button>
         </div>
-    }
+    
 </div>
 
 @code {
-    private IEnumerable<User>? users;
-    private string? currentUser;
     private string postTitle = "";
     private string body = "";
     private string msg = "";
+    
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+
+    private string? name;
+    private IEnumerable<Claim>? userClaims;
 
     protected override async Task OnInitializedAsync()
     {
         msg = "";
         try
         {
-            users = await userService.GetUsers();
+            AuthenticationState authState = await AuthState;
+            ClaimsPrincipal user = authState.User;
+
+            userClaims = user.Claims;
+            name = user.Identity!.Name!;
+            
         }
         catch (Exception e)
         {
@@ -84,12 +78,11 @@
 
         try
         {
-            HttpContext c = new DefaultHttpContext();
-            string? identity = c.User.Identity!.Name;
+           
             
             
 
-            CreatePostDTO dto = new(currentUser, postTitle,body);
+            CreatePostDTO dto = new(name, postTitle,body);
             await postService.CreateAsync(dto);
             navMgr.NavigateTo("/");
         }

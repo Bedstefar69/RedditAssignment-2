@@ -1,6 +1,8 @@
 ﻿@page "/My_Posts"
 @using global::Shared.Models
 @using HttpClients.ClientInterfaces
+@using Microsoft.AspNetCore.Components
+@using System.Security.Claims
 @inject IPostService postService
 
 <AuthorizeView>
@@ -11,26 +13,6 @@
     </NotAuthorized>
     
     <Authorized>
-        <div class="filter-bar">
-            <div class="filters-container">
-                <img src="img/@(doShowFilters ? "clear_" : "")funnel.png" class="funnel" @onclick="@(() => doShowFilters = !doShowFilters)" alt="Funnel"/>
-                @if (doShowFilters)
-                {
-                    <div class="filter">
-                        <label>Username:</label>
-                        <input type="text" @bind="usernameFilter"/>
-                    </div>
-                    <div class="filter">
-                        <label>Post id:</label>
-                        <input type="number" @bind="postIdFilter"/>
-                    </div>
-                }
-            </div>
-        </div>
-        
-        <div>
-            <button style="background-color: #ffa500" @onclick="OnInitializedAsync">Load</button>
-        </div>
 
         @if (posts == null)
         {
@@ -76,17 +58,24 @@
     private IEnumerable<Post>? posts;
     private string msg = "";
     private bool doShowFilters = false;
-    private string? usernameFilter;
-    private int? postIdFilter;
-   
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+
+    private string? name;
+    private IEnumerable<Claim>? userClaims;
     
     protected override async Task OnInitializedAsync()
     {
         try
         {
+            AuthenticationState authState = await AuthState;
+            ClaimsPrincipal user = authState.User;
+
+            userClaims = user.Claims;
+            name = user.Identity!.Name!;
             
-            
-            posts = await postService.GetAsync(usernameFilter, postIdFilter);
+            posts = await postService.GetAsync(name, null);
         }
         catch (Exception e)
         {

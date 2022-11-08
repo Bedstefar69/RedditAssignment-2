@@ -106,6 +106,36 @@
       },
       "Title": "dasdas",
       "Body": "asdasd"
+    },
+    {
+      "Id": 10,
+      "Owner": {
+        "Username": "bigmanthing",
+        "Password": "yea",
+        "Id": 3
+      },
+      "Title": "TOrben block?",
+      "Body": "Im still torben from the block"
+    },
+    {
+      "Id": 11,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "young sebastian",
+      "Body": "tyk?"
+    },
+    {
+      "Id": 12,
+      "Owner": {
+        "Username": "bigmanthing",
+        "Password": "yea",
+        "Id": 3
+      },
+      "Title": "\u00B4henning",
+      "Body": "henning"
     }
   ]
 }
