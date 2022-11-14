@@ -1,0 +1,9 @@
+@startuml
+class Post {
+    + Id : int <<get>> <<set>>
+    + Title : string <<get>> <<set>>
+    + Body : string <<get>> <<set>>
+    + Post(owner:User, title:string, body:string)
+}
+Post --> "Owner" User
+@enduml

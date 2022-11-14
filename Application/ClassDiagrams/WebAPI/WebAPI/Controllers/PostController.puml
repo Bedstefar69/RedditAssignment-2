@@ -1,0 +1,8 @@
+@startuml
+class PostController {
+    + PostController(postLogic:IPostLogic)
+    + <<async>> CreateAsync(dto:CreatePostDTO) : Task<ActionResult<Post>>
+    + <<async>> GetAsync(username:string?, postId:int?) : Task<ActionResult<IEnumerable<Post>>>
+}
+ControllerBase <|-- PostController
+@enduml

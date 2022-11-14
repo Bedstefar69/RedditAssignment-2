@@ -1,0 +1,8 @@
+@startuml
+interface IUserDAO {
+    CreateUserAsync(user:User) : Task<User>
+    GetByUsernameAsync(userName:string) : Task<User?>
+    GetByIdAsync(id:int) : Task<User?>
+    + GetAsync(searchParameters:GetUsersDTO) : Task<IEnumerable<User>>
+}
+@enduml

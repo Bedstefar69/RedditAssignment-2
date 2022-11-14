@@ -1,0 +1,6 @@
+@startuml
+class GetPostsDTO {
+    + Username : string?
+    + GetPostsDTO(username:string?)
+}
+@enduml

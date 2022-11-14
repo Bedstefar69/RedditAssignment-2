@@ -1,0 +1,13 @@
+@startuml
+!include .\\.\WebAPI\Program.puml
+!include .\\.\WebAPI\Controllers\AuthController.puml
+!include .\\.\WebAPI\Controllers\PostController.puml
+!include .\\.\WebAPI\Controllers\TokenController.puml
+!include .\\.\WebAPI\Controllers\UserController.puml
+!include .\\.\WebAPI\Services\AuthService.puml
+!include .\\.\WebAPI\Services\IAuthService.puml
+!include .\\.\WebAPI\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfo.puml
+!include .\\.\WebAPI\obj\Debug\net6.0\WebAPI.GlobalUsings.g.puml
+!include .\\.\WebAPI\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.puml
+@enduml

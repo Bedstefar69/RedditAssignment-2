@@ -1,0 +1,6 @@
+@startuml
+interface IPostService {
+    + createPost(username:string, title:string, body:string) : Task
+    + getAllPosts() : Task
+}
+@enduml

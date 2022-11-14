@@ -1,0 +1,6 @@
+@startuml
+!include .\\.\Auth\AuthorizationPolicies.puml
+!include .\\.\Auth\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\Auth\obj\Debug\net6.0\Auth.AssemblyInfo.puml
+!include .\\.\Auth\obj\Debug\net6.0\Auth.GlobalUsings.g.puml
+@enduml

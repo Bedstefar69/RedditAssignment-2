@@ -1,0 +1,6 @@
+@startuml
+interface IUserService {
+    Create(dto:CreateUserDTO) : Task<User>
+    GetUsers(usernameContains:string?) : Task<IEnumerable<User>>
+}
+@enduml

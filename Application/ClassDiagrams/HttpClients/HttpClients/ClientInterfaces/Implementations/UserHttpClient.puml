@@ -1,0 +1,8 @@
+@startuml
+class UserHttpClient {
+    + UserHttpClient(client:HttpClient)
+    + <<async>> Create(dto:CreateUserDTO) : Task<User>
+    + <<async>> GetUsers(usernameContains:string?) : Task<IEnumerable<User>>
+}
+IUserService <|-- UserHttpClient
+@enduml

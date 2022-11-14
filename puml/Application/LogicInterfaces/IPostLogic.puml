@@ -1,0 +1,6 @@
+@startuml
+interface IPostLogic {
+    CreateAsync(dto:CreatePostDTO) : Task<Post>
+    GetAsync(searchParameter:GetPostsDTO) : Task<IEnumerable<Post>>
+}
+@enduml

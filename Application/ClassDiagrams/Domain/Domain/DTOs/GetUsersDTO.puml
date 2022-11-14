@@ -1,0 +1,6 @@
+@startuml
+class GetUsersDTO {
+    + UsernameContains : string? <<get>>
+    + GetUsersDTO(usernameContains:string?)
+}
+@enduml

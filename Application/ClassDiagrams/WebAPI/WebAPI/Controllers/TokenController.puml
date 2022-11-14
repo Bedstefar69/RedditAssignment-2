@@ -1,0 +1,7 @@
+@startuml
+class TokenController {
+    + GetAsAuthorized() : ActionResult
+    + GetAsAnon() : ActionResult
+}
+ControllerBase <|-- TokenController
+@enduml

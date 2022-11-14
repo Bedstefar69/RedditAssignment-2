@@ -1,0 +1,6 @@
+@startuml
+interface IUserLogic {
+    CreateUserAsync(userToCreate:CreateUserDTO) : Task<User>
+    + GetAsync(searchParameter:GetUsersDTO) : Task<IEnumerable<User>>
+}
+@enduml

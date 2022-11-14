@@ -1,0 +1,6 @@
+@startuml
+interface IPostDAO {
+    CreateAsync(post:Post) : Task<Post>
+    GetAsync(searchParameter:GetPostsDTO) : Task<IEnumerable<Post>>
+}
+@enduml

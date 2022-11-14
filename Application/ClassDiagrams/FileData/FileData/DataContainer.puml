@@ -1,0 +1,8 @@
+@startuml
+class DataContainer {
+}
+class "ICollection`1"<T> {
+}
+DataContainer --> "Users<User>" "ICollection`1"
+DataContainer --> "Posts<Post>" "ICollection`1"
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+class PostHttpClient {
+    + PostHttpClient(client:HttpClient)
+    + <<async>> CreateAsync(dto:CreatePostDTO) : Task
+    + <<async>> GetByIdAsync(id:int) : Task<GetPostsDTO>
+    + <<async>> GetAsync(username:string?, postId:int?) : Task<ICollection<Post>>
+}
+IPostService <|-- PostHttpClient
+@enduml

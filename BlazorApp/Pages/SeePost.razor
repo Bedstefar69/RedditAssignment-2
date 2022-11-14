@@ -1,0 +1,69 @@
+﻿@page "/SeePost/{id:int}"
+@using global::Shared.Models
+@using HttpClients.ClientInterfaces
+@inject IPostService postService
+<h3>SeePost</h3>
+   @if (posts == null)
+        {
+        }
+        else if (!posts.Any())
+        {
+            <p>No Posts to display</p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>post ID</th>
+                    <th>Owner ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in posts)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Owner.Username</td>
+                        <td>@item.Title</td>
+                        <td>@item.Body</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        @if (!string.IsNullOrEmpty(msg))
+        {
+            <label style="color: red">@msg</label>
+        }
+
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private string msg = "";
+    private IEnumerable<Post>? posts;
+   
+    
+    protected override async Task OnInitializedAsync()
+    {
+        
+        try
+        {
+            
+            
+            posts = await postService.GetAsync(null, Id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    
+    
+
+}
