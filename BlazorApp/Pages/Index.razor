@@ -1,9 +1,81 @@
 ﻿@page "/"
-
+@using global::Shared.Models
+@using IPostService = HttpClients.ClientInterfaces.IPostService
+@inject IPostService postService
+@inject NavigationManager navMgr
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<link href="css/index.css" rel="stylesheet"/>
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?"/>
+    <div class="main_div">
+        <h1 id="welcome_banner">Velkommen til 4tune</h1>
+        <h2 id="welcome_subbanner">Du kan logge ind øverest i højre hjørne</h2>
+        <h4>Ytringsfrihed er ikke til diskussion</h4>
+    </div>
+
+      
+
+        @if (posts == null)
+        {
+        }
+        else if (!posts.Any())
+        {
+            <p>No Posts to display</p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Post ID</th>
+                    <th>Owner</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in posts)
+                {
+                    <tr>
+                        <td><button style="background-color:#ffa500;" @onclick="@(() => navMgr.NavigateTo($"/SeePost/{item.Id}"))">See Post</button></td>
+                        <td>@item.Id</td>
+                        <td>@item.Owner.Username</td>
+                        <td>@item.Title</td>
+                        <td>@item.Body</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        @if (!string.IsNullOrEmpty(msg))
+        {
+            <label style="color: red">@msg</label>
+        }
+
+
+        @code
+        {
+            private IEnumerable<Post>? posts;
+            private string msg = "";
+
+            protected override async Task OnInitializedAsync()
+            {
+                try
+                {
+                    posts = await postService.GetAsync(null, null);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    msg = e.Message;
+                }
+            }
+
+
+
+        }
+
+
+ 

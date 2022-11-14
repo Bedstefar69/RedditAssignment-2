@@ -32,7 +32,8 @@ public class AuthController : ControllerBase
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
             new Claim(ClaimTypes.Name, user.Username),
-         
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+
         };
         return claims.ToList();
     }
@@ -57,6 +58,7 @@ public class AuthController : ControllerBase
     
         string serializedToken = new JwtSecurityTokenHandler().WriteToken(token);
         return serializedToken;
+        
     }
 
     [HttpPost, Route("login")]

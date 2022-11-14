@@ -10,4 +10,13 @@
       <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="ClassDiagrams\Application" />
+      <Folder Include="ClassDiagrams\Auth" />
+      <Folder Include="ClassDiagrams\BlazorApp" />
+      <Folder Include="ClassDiagrams\Domain" />
+      <Folder Include="ClassDiagrams\FileData" />
+      <Folder Include="ClassDiagrams\WebAPI" />
+    </ItemGroup>
+
 </Project>

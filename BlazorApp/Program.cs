@@ -1,19 +1,30 @@
 using BlazorApp.Auth;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using BlazorApp.Data;
 using BlazorApp.Services;
 using BlazorApp.Services.Http;
+using HttpClients.ClientInterfaces;
+using HttpClients.ClientInterfaces.Implementations;
 using Microsoft.AspNetCore.Components.Authorization;
+using IPostService = HttpClients.ClientInterfaces.IPostService;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<IAuthService, JwtAuthService>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthProvider>();
+builder.Services.AddScoped<IUserService, UserHttpClient>();
+builder.Services.AddScoped<IPostService, PostHttpClient>();
+
+builder.Services.AddScoped(
+    sp => 
+        new HttpClient { 
+            BaseAddress = new Uri("https://localhost:7263") 
+        }
+);
+
 
 
 var app = builder.Build();
@@ -25,6 +36,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 

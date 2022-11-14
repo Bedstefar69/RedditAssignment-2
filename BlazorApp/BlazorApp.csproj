@@ -12,6 +12,21 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\HttpClients\HttpClients.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\css\index.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="Pages\SeePost.razor">
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Data" />
     </ItemGroup>
 
 </Project>

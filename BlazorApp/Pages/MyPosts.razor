@@ -1,8 +1,86 @@
 ﻿@page "/My_Posts"
-<h3>My_Posts</h3>
+@using global::Shared.Models
+@using HttpClients.ClientInterfaces
+@using System.Security.Claims
+@inject IPostService postService
 
-<p1>ost</p1>
+<AuthorizeView>
+    <NotAuthorized>
+        <h3>My Posts</h3>
+
+        <p>You must be logged in to see your posts</p>
+    </NotAuthorized>
+    
+    <Authorized>
+
+        @if (posts == null)
+        {
+        }
+        else if (!posts.Any())
+        {
+            <p>No Posts to display</p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Post ID</th>
+                    <th>Owner</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in posts)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Owner.Username</td>
+                        <td>@item.Title</td>
+                        <td>@item.Body</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        @if (!string.IsNullOrEmpty(msg))
+        {
+            <label style="color: red">@msg</label>
+        }
+
+    </Authorized>
+</AuthorizeView>
 
 @code {
+
+    private IEnumerable<Post>? posts;
+    private string msg = "";
+    private bool doShowFilters = false;
+
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+
+    private string? name;
+    private IEnumerable<Claim>? userClaims;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            AuthenticationState authState = await AuthState;
+            ClaimsPrincipal user = authState.User;
+
+            userClaims = user.Claims;
+            name = user.Identity!.Name!;
+            
+            posts = await postService.GetAsync(name, null);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
     
 }

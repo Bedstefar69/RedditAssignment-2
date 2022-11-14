@@ -4,7 +4,138 @@
       "Username": "flemse",
       "Password": "flemming123",
       "Id": 1
+    },
+    {
+      "Username": "eqwe",
+      "Password": "qweqwe",
+      "Id": 2
+    },
+    {
+      "Username": "bigmanthing",
+      "Password": "yea",
+      "Id": 3
     }
   ],
-  "Posts": []
+  "Posts": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "Ka du li ost?",
+      "Body": "blablablablablabla"
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Username": "eqwe",
+        "Password": "qweqwe",
+        "Id": 2
+      },
+      "Title": "flemming?",
+      "Body": "jajajjajaja"
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "Skinke Rating",
+      "Body": "Dagens skinke er sej"
+    },
+    {
+      "Id": 4,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "fdsfsdf",
+      "Body": "sdfsdf"
+    },
+    {
+      "Id": 5,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "yeah",
+      "Body": "ost"
+    },
+    {
+      "Id": 6,
+      "Owner": {
+        "Username": "bigmanthing",
+        "Password": "yea",
+        "Id": 3
+      },
+      "Title": "john",
+      "Body": "hitler"
+    },
+    {
+      "Id": 7,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "weqwe",
+      "Body": "fwewf"
+    },
+    {
+      "Id": 8,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "asdasd",
+      "Body": "yoyoyoyoy"
+    },
+    {
+      "Id": 9,
+      "Owner": {
+        "Username": "eqwe",
+        "Password": "qweqwe",
+        "Id": 2
+      },
+      "Title": "dasdas",
+      "Body": "asdasd"
+    },
+    {
+      "Id": 10,
+      "Owner": {
+        "Username": "bigmanthing",
+        "Password": "yea",
+        "Id": 3
+      },
+      "Title": "TOrben block?",
+      "Body": "Im still torben from the block"
+    },
+    {
+      "Id": 11,
+      "Owner": {
+        "Username": "flemse",
+        "Password": "flemming123",
+        "Id": 1
+      },
+      "Title": "young sebastian",
+      "Body": "tyk?"
+    },
+    {
+      "Id": 12,
+      "Owner": {
+        "Username": "bigmanthing",
+        "Password": "yea",
+        "Id": 3
+      },
+      "Title": "\u00B4henning",
+      "Body": "henning"
+    }
+  ]
 }

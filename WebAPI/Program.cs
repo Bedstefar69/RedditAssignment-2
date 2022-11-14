@@ -3,6 +3,8 @@ using Application.DAOInterfaces;
 using Application.Logic;
 using Application.LogicInterfaces;
 using Auth;
+using EFCDataAccess;
+using EFCDataAccess.DAOs;
 using FileData;
 using FileData.DAOs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,9 +20,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<FileContext>();
-builder.Services.AddScoped<IUserDAO, UserFileDAO>();
+builder.Services.AddDbContext<PostContext>();
+builder.Services.AddScoped<IUserDAO, UserEfcDao>();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPostDAO, PostEfcDao>();
+builder.Services.AddScoped<IPostLogic, PostLogic>();
 
 
 AuthorizationPolicies.AddPolicies(builder.Services);
