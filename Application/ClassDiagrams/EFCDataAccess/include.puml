@@ -1,0 +1,11 @@
+@startuml
+!include .\\.\EFCDataAccess\PostContext.puml
+!include .\\.\EFCDataAccess\DAOs\PostEfcDao.puml
+!include .\\.\EFCDataAccess\DAOs\UserEfcDao.puml
+!include .\\.\EFCDataAccess\Migrations\20221108144956_Init.puml
+!include .\\.\EFCDataAccess\Migrations\20221108144956_Init.Designer.puml
+!include .\\.\EFCDataAccess\Migrations\PostContextModelSnapshot.puml
+!include .\\.\EFCDataAccess\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.puml
+!include .\\.\EFCDataAccess\obj\Debug\net6.0\EFCDataAccess.AssemblyInfo.puml
+!include .\\.\EFCDataAccess\obj\Debug\net6.0\EFCDataAccess.GlobalUsings.g.puml
+@enduml

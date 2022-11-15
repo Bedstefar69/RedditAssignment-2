@@ -1,0 +1,8 @@
+@startuml
+class PostEfcDao {
+    + PostEfcDao(context:PostContext)
+    + <<async>> CreateAsync(post:Post) : Task<Post>
+    + <<async>> GetAsync(searchParameter:GetPostsDTO) : Task<IEnumerable<Post>>
+}
+IPostDAO <|-- PostEfcDao
+@enduml

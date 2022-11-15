@@ -1,0 +1,9 @@
+@startuml
+class PostContext {
+}
+class "DbSet`1"<T> {
+}
+DbContext <|-- PostContext
+PostContext --> "Users<User>" "DbSet`1"
+PostContext --> "Posts<Post>" "DbSet`1"
+@enduml

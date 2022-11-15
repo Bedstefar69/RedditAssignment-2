@@ -1,0 +1,10 @@
+@startuml
+class UserEfcDao {
+    + UserEfcDao(context:PostContext)
+    + <<async>> CreateUserAsync(user:User) : Task<User>
+    + <<async>> GetByUsernameAsync(userName:string) : Task<User?>
+    + <<async>> GetByIdAsync(id:int) : Task<User?>
+    + <<async>> GetAsync(searchParameters:GetUsersDTO) : Task<IEnumerable<User>>
+}
+IUserDAO <|-- UserEfcDao
+@enduml
