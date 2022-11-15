@@ -5,17 +5,15 @@ public class GetPostsDTO
 {
     public string? Username;
     public int? PostId;
+    public int? UserId;
 
 
-    public GetPostsDTO(string? username, int? postId)
+    public GetPostsDTO(string? username, int? postId, int? userId)
     {
         Username = username;
         PostId = postId;
+        UserId = userId;
     }
     
-    public GetPostsDTO( int? postId)
-    {
-       
-        PostId = postId;
-    }
+  
 }

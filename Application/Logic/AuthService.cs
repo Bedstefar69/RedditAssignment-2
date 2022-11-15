@@ -1,26 +1,24 @@
-﻿using System.Collections;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
-using FileData;
+using Application.DAOInterfaces;
 using Shared.Models;
 
-namespace WebAPI.Services;
+namespace Application.Logic;
 
 public class AuthService : IAuthService
 
 {
-    private IList<User> ReadFile()
-    {
-        string jsonString = File.ReadAllText(@"./data.json");
-        DataContainer dc = JsonSerializer.Deserialize<DataContainer>(jsonString);
-        return dc.Users.ToList();
-    }
+    private readonly IUserDAO userDao;
 
-    
-    public Task<User> ValidateUser(string username, string password)
+    public AuthService(IUserDAO userDao)
     {
-        User? existingUser = ReadFile().FirstOrDefault(u =>
-            u.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
+        this.userDao = userDao;
+    }
+    
+    
+    public async Task<User> ValidateUser(string username, string password)
+    {
+        User? existingUser = await userDao.GetByUsernameAsync(username);
 
         if (existingUser == null)
         {
@@ -32,10 +30,10 @@ public class AuthService : IAuthService
             throw new Exception("Password mismatch");
         }
 
-        return Task.FromResult(existingUser);
+        return existingUser;
     }
 
-    public Task RegisterUser(User user)
+    public async Task RegisterUser(User user)
     {
         if (string.IsNullOrEmpty(user.Username))
         {
@@ -50,8 +48,6 @@ public class AuthService : IAuthService
 
         // save to persistence instead of list
 
-        ReadFile().Add(user);
-
-        return Task.CompletedTask;
+        await userDao.CreateUserAsync(user);
     }
 }

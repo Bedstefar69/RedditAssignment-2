@@ -632,15 +632,6 @@
         "runtime": {
           "EFCDataAccess.dll": {}
         }
-      },
-      "FileData/1.0.0": {
-        "dependencies": {
-          "Application": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.10"
-        },
-        "runtime": {
-          "FileData.dll": {}
-        }
       }
     }
   },
@@ -1002,11 +993,6 @@
       "sha512": ""
     },
     "EFCDataAccess/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "FileData/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

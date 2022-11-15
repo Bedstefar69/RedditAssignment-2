@@ -16,7 +16,10 @@
       <ProjectReference Include="..\Application\Application.csproj" />
       <ProjectReference Include="..\Auth\Auth.csproj" />
       <ProjectReference Include="..\EFCDataAccess\EFCDataAccess.csproj" />
-      <ProjectReference Include="..\FileData\FileData.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Services" />
     </ItemGroup>
 
 </Project>

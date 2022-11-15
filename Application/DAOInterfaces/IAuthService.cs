@@ -1,6 +1,6 @@
 ﻿using Shared.Models;
 
-namespace WebAPI.Services;
+namespace Application.DAOInterfaces;
 
 public interface IAuthService
 {

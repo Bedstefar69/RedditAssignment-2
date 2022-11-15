@@ -167,10 +167,8 @@ C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\System
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Application.dll
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Auth.dll
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Domain.dll
-C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\FileData.dll
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Application.pdb
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Auth.pdb
-C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\FileData.pdb
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\bin\Debug\net6.0\Domain.pdb
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache
 C:\Users\Dell\Documents\GitHub\RedditAssignment-2\WebAPI\obj\Debug\net6.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
