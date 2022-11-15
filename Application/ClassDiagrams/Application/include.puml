@@ -1,6 +1,8 @@
 @startuml
+!include .\\.\Application\DAOInterfaces\IAuthService.puml
 !include .\\.\Application\DAOInterfaces\IPostDAO.puml
 !include .\\.\Application\DAOInterfaces\IUserDAO.puml
+!include .\\.\Application\Logic\AuthService.puml
 !include .\\.\Application\Logic\PostLogic.puml
 !include .\\.\Application\Logic\UserLogic.puml
 !include .\\.\Application\LogicInterfaces\IPostLogic.puml

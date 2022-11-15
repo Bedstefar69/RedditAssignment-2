@@ -1,9 +1,0 @@
-@startuml
-class FileContext {
-    + SaveChanges() : void
-}
-class "ICollection`1"<T> {
-}
-FileContext --> "Posts<Post>" "ICollection`1"
-FileContext --> "Users<User>" "ICollection`1"
-@enduml

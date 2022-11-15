@@ -24,23 +24,22 @@ public class PostEfcDao : IPostDAO
 
     public async Task<IEnumerable<Post>> GetAsync(GetPostsDTO searchParameter)
     {
-        IQueryable<Post> query = context.Posts.Include(todo => todo.Owner).AsQueryable();
+        IQueryable<Post> query = context.Posts.Include(post => post.Owner).AsQueryable();
     
         if (!string.IsNullOrEmpty(searchParameter.Username))
         {
-            // we know username is unique, so just fetch the first
-            query = query.Where(todo =>
-                todo.Owner.Username.ToLower().Equals(searchParameter.Username.ToLower()));
+            query = query.Where(post =>
+                post.Owner.Username!.ToLower().Equals(searchParameter.Username.ToLower()));
         }
     
         if (searchParameter.UserId != null)
         {
-            query = query.Where(t => t.Owner.Id == searchParameter.UserId);
+            query = query.Where(p => p.Owner.Id == searchParameter.UserId);
         }
         
         if (searchParameter.PostId != null)
         {
-            query = query.Where(t => t.Id == searchParameter.PostId);
+            query = query.Where(p => p.Id == searchParameter.PostId);
         }
         
     

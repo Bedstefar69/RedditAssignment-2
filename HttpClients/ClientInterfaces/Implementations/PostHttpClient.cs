@@ -23,23 +23,6 @@ public class PostHttpClient : IPostService
         }
     }
 
-    public async Task<GetPostsDTO> GetByIdAsync(int id)
-    {
-        HttpResponseMessage response = await client.GetAsync($"/post/{id}");
-        string content = await response.Content.ReadAsStringAsync();
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new Exception(content);
-        }
-
-        GetPostsDTO post = JsonSerializer.Deserialize<GetPostsDTO>(content, 
-            new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            }
-        )!;
-        return post;
-    }
 
     public async Task<ICollection<Post>> GetAsync(string? username, int? postId)
     {

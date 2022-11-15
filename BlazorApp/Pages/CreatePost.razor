@@ -1,10 +1,8 @@
 ﻿@page "/Create_Post"
 @using global::Shared.DTOs
-@using global::Shared.Models
 @using HttpClients.ClientInterfaces
 @using Microsoft.AspNetCore.Components
 @using System.Security.Claims
-@inject IUserService userService
 @inject IPostService postService
 @inject NavigationManager navMgr
 
@@ -82,9 +80,9 @@
             
             
 
-            CreatePostDTO dto = new(name, postTitle,body);
+            CreatePostDTO dto = new(name!, postTitle,body);
             await postService.CreateAsync(dto);
-            navMgr.NavigateTo("/");
+            navMgr.NavigateTo("/My_Posts");
         }
         catch (Exception e)
         {

@@ -1,0 +1,5 @@
+@startuml
+interface IAuthService {
+    ValidateUser(username:string, password:string) : Task<User>
+}
+@enduml

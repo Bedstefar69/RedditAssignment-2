@@ -1,0 +1,7 @@
+@startuml
+class AuthService {
+    + AuthService(userDao:IUserDAO)
+    + <<async>> ValidateUser(username:string, password:string) : Task<User>
+}
+IAuthService <|-- AuthService
+@enduml

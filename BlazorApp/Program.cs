@@ -1,6 +1,4 @@
 using BlazorApp.Auth;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using BlazorApp.Services;
 using BlazorApp.Services.Http;
 using HttpClients.ClientInterfaces;

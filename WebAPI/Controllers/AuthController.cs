@@ -2,7 +2,6 @@
 using System.Security.Claims;
 using System.Text;
 using Application.DAOInterfaces;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Shared.DTOs;

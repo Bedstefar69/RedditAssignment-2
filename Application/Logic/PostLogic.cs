@@ -24,7 +24,7 @@ public class PostLogic : IPostLogic
             throw new Exception($"User with username {dto.Username} was not found.");
         }
 
-        ValidateTodo(dto);
+        ValidatePost(dto);
         Post post = new Post(user, dto.Title, dto.Body);
         Post created = await postDao.CreateAsync(post);
         return created;
@@ -35,8 +35,11 @@ public class PostLogic : IPostLogic
         return postDao.GetAsync(searchParameter);
     }
 
-    private void ValidateTodo(CreatePostDTO dto)
+    private void ValidatePost(CreatePostDTO dto)
     {
         if (string.IsNullOrEmpty(dto.Title)) throw new Exception("Title cannot be empty.");
+        if (string.IsNullOrEmpty(dto.Body)) throw new Exception("Body cannot be empty.");
+        
     }
+    
 }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json;
-using Application.DAOInterfaces;
+﻿using Application.DAOInterfaces;
 using Shared.Models;
 
 namespace Application.Logic;
@@ -32,22 +30,5 @@ public class AuthService : IAuthService
 
         return existingUser;
     }
-
-    public async Task RegisterUser(User user)
-    {
-        if (string.IsNullOrEmpty(user.Username))
-        {
-            throw new ValidationException("Username cannot be null");
-        }
-
-        if (string.IsNullOrEmpty(user.Password))
-        {
-            throw new ValidationException("Password cannot be null");
-        }
-        // Do more user info validation here
-
-        // save to persistence instead of list
-
-        await userDao.CreateUserAsync(user);
-    }
+    
 }

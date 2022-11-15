@@ -1,8 +1,0 @@
-@startuml
-class PostDAO {
-    + PostDAO(context:FileContext)
-    + CreateAsync(post:Post) : Task<Post>
-    + GetAsync(searchParameter:GetPostsDTO) : Task<IEnumerable<Post>>
-}
-IPostDAO <|-- PostDAO
-@enduml
